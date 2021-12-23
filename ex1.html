@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Duna</title>
+</head>
+<body>
+<h1>Duna</h1>
+<p>Uma estonteante mistura de aventura e misticismo, ecologia e
+política, este romance ganhador dos prêmios Hugo e Nebula deu início
+a uma das mais épicas histórias de toda a ficção científica. Duna é
+um triunfo da imaginação, que influenciará a literatura para
+sempre.Esta edição inédita, com introdução de Neil Gaiman, apresenta
+ao leitor o universo fantástico criado por Herbert e que será
+adaptado ao cinema por Denis Villeneuve, diretor de A chegada e de
+Blade Runner 2.Doze anos se passaram desde que Paul Atreides ascendeu
+ao trono e acumulou os títulos de imperador e messias. Líder do maior
+império que a humanidade já viu, Paul está terrivelmente consciente
+do peso de suas decisões. Arrakis tornou-se o centro do Imperium, de
+onde os fremen se propagaram a fim de levar sua filosofia e forma de
+governar aos planetas por eles conquistados. Os inevitáveis conflitos
+gerados por essa expansão fazem importantes facções contrárias ao
+imperador reunirem forças para detê-lo. Uma grande disputa está
+prestes a ter início nos bastidores do poder, e apenas Muad’Dib pode
+decidir o destino de todos. Messias de Duna é o segundo volume da
+série criada por frank herbert. Ele revela um lado mais humano de
+seus personagens, além de aprofundar e estender o universo de Duna,
+aliando discussões políticas, filosóficas e religiosas à épica
+história de poder, vingança e redenção.</p>
+<p>O Imperium vive um interregno após Paul Atreides abdicar de
+seu título de imperador e entregar-se ao deserto. Sua irmã, Alia,
+ascende ao poder como regente enquanto os filhos de Muad’Dib não são
+capazes de assumir o Trono do Leão. Herdeiros não só do poder político e econômico de seu pai, os gêmeos também carregam em suas
+veias toda a carga genética manipulada por séculos pela Irmandade
+Bene Gesserit. Mas a hegemonia dos Atreides está ameaçada.</p>
+
+<script type="text/javascript">
+    var elements = document.getElementsByTagName("p");
+    var content;
+    var words;
+
+    for(i=0;i<elements.length;i++) {
+        content = elements[i].innerHTML;
+        words = content.split(/[\n,\r, ,\,,\.]/);
+
+        for(j=0;j<words.length;j++) {
+            
+            if(words[j].length >= 10)
+                content = content.replace(words[j],"<b>" + words[j] + "</b>");
+        }
+
+        elements[i].innerHTML = content;
+
+    }
+</script>
+</body>
+</html>

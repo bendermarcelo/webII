@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/ex2.css" />
+    <title>Favoritos do Youtube</title>
+</head>
+<body>
+
+    <form>
+        <h1>Adicionar novo vídeo</h1>
+        <div class="form-group">
+            <label for="txtNome">Título do vídeo:</label>
+            <input type="text"  class="form-control" name="txtNome" id="txtNome" aria-describedby="nomeHelp" placeholder="Informe o título do vídeo" />
+            <small id="nomeHelp" class="form-text text-muted">Informe um título que será utilizado para salvar e identificar o vídeo </small>
+        </div>
+
+        <div class="form-group">
+            <label for="txtURL">URL do vídeo:</label>
+            <input type="text"  class="form-control" name="txtURL" id="txtURL" aria-describedby="urlHelp" placeholder="Informe a url do youtube" />
+            <small id="txtURL" class="form-text text-muted">Informe a url ou caminho do vídeo no Youtube</small>
+        </div>
+
+        <input type="submit" value="Salvar Vídeo" class="btn btn-primary" />
+
+        
+    </form>
+
+
+    <div class="card videos-list">
+        <h1 class="card-title">Lista de vídeos</h1>
+
+        <div class="card-body content">
+            Ainda não há vídeos adicionados
+        </div>
+
+    </div>
+    
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/ex2.js"></script>
+</body>
+</html>

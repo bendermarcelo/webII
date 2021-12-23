@@ -1,0 +1,21 @@
+form,
+.videos-list{
+    width: 60%;
+    display: block;
+    margin: 60px auto;
+    border: solid 1px #000000;
+    padding: 10px;
+}
+
+.form-group {
+    margin: 40px 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: #cdcdcd;
+}
+
+.videos-list .content .item {
+    margin: 20px 0;
+}

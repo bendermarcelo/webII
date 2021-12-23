@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+form fieldset {
+    flex: 1;
+    margin-right: 10px;
+}
+
+body > div .col-6 {
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+body > div .col-6 h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+}
+
+table tr th {
+    border-bottom: solid 1px #000000;
+}
+
+table tr td a {
+    margin-right: 10px;
+}
+
+.imoveis-list h3 {
+    text-align: center;
+    padding: 20px;
+    background-color: #cdcdcd;
+}
+
+.imovel-item {
+    border: solid 1px #000000;
+    padding: 40px;
+}

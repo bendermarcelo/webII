@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária</title>
+
+    <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/ex3.css" />
+
+</head>
+<body>
+
+    <div class="row">
+    
+        <div class="col-6 card casas-list">
+            <h1 class="card-title">Casas</h1>
+
+            <div class="card-body content">
+                Ainda não há casas cadastradas
+            </div>
+
+            <div class="card-footer buttons">
+                <input type="button" class="btn btn-primary btn-add-Casa" value="Adicionar Casa" data-bs-toggle="modal" data-bs-target="#addCasaModal"/>
+            </div>
+        </div>
+
+        <div class="col-6 card apartamentos-list">
+            <h1 class="card-title">Apartamentos</h1>
+
+            <div class="card-body content">
+                Ainda não há apartamentos cadastrados
+            </div>
+
+            <div class="card-footer buttons">
+                <input type="button" class="btn btn-primary add-Casa" value="Adicionar Apartamento"  data-bs-toggle="modal" data-bs-target="#addApartamentoModal" />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row imoveis-list">
+        <div class="col-12">
+            <h3>Lista de imóveis</h3>
+
+            <div class="content">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addCasaModal" tabindex="-1" aria-labelledby="addCasaModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCasaModal">Adicionar Casa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <fieldset>
+                        <legend>Características</legend>
+                        <input type="hidden" name="id" value="" />
+                        
+                        <div class="mb-3">
+                            <label for="txtRua">Título:</label>
+                            <input type="text"  class="form-control" name="txtTitulo" id="txtTitulo" placeholder="Informe o título de identificação da casa" />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="txtQuartos">Quantidade de Quartos:</label>
+                            <input type="text"  class="form-control" name="txtQuartos" id="txtQuartos" placeholder="Informe a quantidade de quartos" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtBanheiros">Quantidade de Banheiros:</label>
+                            <input type="text"  class="form-control" name="txtBanheiros" id="txtBanheiros" placeholder="Informe a quantidade de banheiros" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtGaragens">Quantidade de Garagens:</label>
+                            <input type="text"  class="form-control" name="txtGaragens" id="txtGaragens" placeholder="Informe a quantidade de garagens" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtAreaTerreno">Área do terreno:</label>
+                            <input type="text"  class="form-control" name="txtAreaTerreno" id="txtAreaTerreno" placeholder="Informe a área total do terreno" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtAreaConstruida">Área construída:</label>
+                            <input type="text"  class="form-control" name="txtAreaConstruida" id="txtAreaConstruida" placeholder="Informe a área construída da casa" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtPreco">Preço:</label>
+                            <input type="text"  class="form-control" name="txtPreco" id="txtPreco" placeholder="Informe o preço da casa" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="mb-3">
+                            <label for="txtRua">Rua:</label>
+                            <input type="text"  class="form-control" name="txtRua" id="txtRua" placeholder="Informe a Rua" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtNumero">Número:</label>
+                            <input type="text"  class="form-control" name="txtNumero" id="txtNumero" placeholder="Informe o número" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtBairro">Bairro:</label>
+                            <input type="text"  class="form-control" name="txtBairro" id="txtBairro" placeholder="Informe o Bairro" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCidade">Cidade:</label>
+                            <input type="text"  class="form-control" name="txtCidade" id="txtCidade" placeholder="Informe a Cidade" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtEstado">Estado:</label>
+                            <input type="text"  class="form-control" name="txtEstado" id="txtEstado" placeholder="Informe o Estado" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCEP">CEP:</label>
+                            <input type="text"  class="form-control" name="txtCEP" id="txtCEP" placeholder="Informe o CEP" />
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar e Fechar</button>
+                <button type="button" class="btn btn-primary" id="btn-add-casa">Salvar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addApartamentoModal" tabindex="-1" aria-labelledby="addApartamentoModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addApartamentoModal">Adicionar Apartamento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <fieldset>
+                        <legend>Características</legend>
+
+                        <input type="hidden" name="id" value="" />
+                        
+                        <div class="mb-3">
+                            <label for="txtRua">Título:</label>
+                            <input type="text"  class="form-control" name="txtTitulo" id="txtTitulo" placeholder="Informe o título de identificação da casa" />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="txtQuartos">Quantidade de Quartos:</label>
+                            <input type="text"  class="form-control" name="txtQuartos" id="txtQuartos" placeholder="Informe a quantidade de quartos" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtBanheiros">Quantidade de Banheiros:</label>
+                            <input type="text"  class="form-control" name="txtBanheiros" id="txtBanheiros" placeholder="Informe a quantidade de banheiros" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtGaragens">Quantidade de Garagens:</label>
+                            <input type="text"  class="form-control" name="txtGaragens" id="txtGaragens" placeholder="Informe a quantidade de garagens" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCondominio">Condomínio:</label>
+                            <input type="text"  class="form-control" name="txtCondominio" id="txtCondominio" placeholder="Informe o valor do condomínio" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtTamanho">Tamanho:</label>
+                            <input type="text"  class="form-control" name="txtTamanho" id="txtTamanho" placeholder="Informe o tamanho do apartamento" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtPreco">Preço:</label>
+                            <input type="text"  class="form-control" name="txtPreco" id="txtPreco" placeholder="Informe o preço do apartamento" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <div class="mb-3">
+                            <label for="txtRua">Rua:</label>
+                            <input type="text"  class="form-control" name="txtRua" id="txtRua" placeholder="Informe a Rua" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtNumero">Número:</label>
+                            <input type="text"  class="form-control" name="txtNumero" id="txtNumero" placeholder="Informe o número" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtBairro">Bairro:</label>
+                            <input type="text"  class="form-control" name="txtBairro" id="txtBairro" placeholder="Informe o Bairro" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCidade">Cidade:</label>
+                            <input type="text"  class="form-control" name="txtCidade" id="txtCidade" placeholder="Informe a Cidade" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtEstado">Estado:</label>
+                            <input type="text"  class="form-control" name="txtEstado" id="txtEstado" placeholder="Informe o Estado" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCEP">CEP:</label>
+                            <input type="text"  class="form-control" name="txtCEP" id="txtCEP" placeholder="Informe o CEP" />
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar e Fechar</button>
+                <button type="button" class="btn btn-primary" id="btn-add-apartamento">Salvar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="lib/fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/ex3.js"></script>
+</body>
+</html>
